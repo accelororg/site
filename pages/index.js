@@ -1,51 +1,45 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Stack from '../components/_theaccelorstack'
+import Footer from '../components/_footer'
 
 export default function Home() {
+  var backgrounds = ["/home/homeback-feb2021-1.jpg","/home/homeback-feb2021-2.jpg"]
+  const randomElement = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+  
   return (
-    <div className="container">
+    <div className={styles.backgroundwrapper} style={{backgroundImage: `url(${randomElement})`, minHeight: "100vh", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+       <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Accelor</title>
+        <link rel="icon" href="/logo.svg" />
         <link rel="stylesheet" href="https://cross-site.acceloredge.com/css/crosssite.css" />
       </Head>
 
       <main className={styles.main}>
+      <img src="/logo.svg" width="300" style={{marginBottom:"1em"}}/>
         <h1 className={styles.title}>
           The Web Speed Experts
         </h1>
-
+        
+        <h2>We're the humans that build AccelorEdge™ and other secret projects.</h2>
         <div className={styles.grid}>
-          <a href="https://acceloredge.com?ref=accelor" className={styles.card} target="_blank">
-            <h3>AccelorEdge &rarr;</h3>
-            <p>A revolutionary MultiCDN service.</p>
+          <a className={styles.card} target="_blank" style={{cursor:"not-allowed"}}>
+            <h3>AccelorEdge™ &rarr;</h3>
+            <p>A revolutionary new MultiCDN service.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          <a href="mailto:us@accelor.io" className={styles.card}>
+            <h3>Got an Idea? &rarr;</h3>
+            <p>Shoot us an email and we'll check it out.</p>
           </a>
         </div>
+        <Stack />
       </main>
-
+      <Footer />
+      </div>
+      
     </div>
+   
   )
 }
