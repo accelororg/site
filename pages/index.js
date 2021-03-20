@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <img src="/logo.svg" width="300" style={{marginBottom:"1em"}}/>
+
         <h1 className={styles.title}>
           The Web Speed Experts
         </h1>
