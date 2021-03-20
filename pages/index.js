@@ -29,7 +29,7 @@ export default function Home() {
             <p>A revolutionary new MultiCDN service.</p>
           </a>
 
-          <a href="mailto:us@acceloredge.com" className={styles.card}>
+          <a href="mailto:us@accelorsoftware.com" className={styles.card}>
             <h3>Got an Idea? &rarr;</h3>
             <p>Shoot us an email and we'll check it out.</p>
           </a>
