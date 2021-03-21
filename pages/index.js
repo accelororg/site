@@ -8,16 +8,14 @@ export default function Home() {
   const randomElement = backgrounds[Math.floor(Math.random() * backgrounds.length)];
   
   return (
-    <div className={styles.backgroundwrapper} style={{backgroundImage: `url(${randomElement})`, minHeight: "100vh", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+    <div className={styles.backgroundwrapper} style={{backgroundImage: `url(${randomElement})`, minHeight: "100vh", backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundAttachment:"fixed"}}>
        <div className="container">
       <Head>
         <title>Accelor</title>
-        <link rel="icon" href="/logo.svg" />
         <link rel="stylesheet" href="https://cross-site.acceloredge.com/css/crosssite.css" />
       </Head>
 
       <main className={styles.main}>
-      <img src="/logo.svg" width="300" style={{marginBottom:"1em"}}/>
         <h1 className={styles.title}>
           The Web Speed Experts
         </h1>
